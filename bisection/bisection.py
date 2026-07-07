@@ -58,14 +58,14 @@ def plot_function(f, a, b, root, title, filename):
 
 
 def run_bisection_task(task_num = 0):
-    labels = [
+    label = [
         "e^x - x^2 = 0",
         "x^3 - x - 2 = 0",
         "cos(x) - x = 0",
         "x^3 - 4x - 9 = 0",
         "e^-x - x = 0",
         "x^2 - 5 = 0",
-    ]
+    ][task_num]
 
     func = [
         lambda x: math.exp(x) - x ** 2,
@@ -93,8 +93,6 @@ def run_bisection_task(task_num = 0):
         1e-6,
         1e-5,
     ][task_num]
-
-    label = labels[task_num]
 
     print("=" * 70)
     print(f"BISECTION METHOD: {label} on [{a}, {b}], eps = {eps}")
