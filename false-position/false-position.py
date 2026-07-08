@@ -23,7 +23,7 @@ def false_position(func, a, b, eps, max_iter=200):
         n += 1
         rows.append((n, a, b, c, func_c))
 
-        if abs(func_c) < eps or width < eps:
+        if abs(func_c) < eps:
             return c, func_c, width, n, rows
 
         if func_a * func_c < 0:
